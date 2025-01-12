@@ -1,9 +1,10 @@
 import { useState, useCallback, useMemo } from 'react'
-import './App.css'
 // import LayoutEffect from './components/LayoutEffect'
 // import Reducer from './components/Reducer'
 // import ReactMemo from './components/ReactMemo';
 import Callback from './components/Callback'
+import Watch from './components/Watch'
+import Slider from './components/Slider'
 
 
 function App() {
@@ -40,8 +41,7 @@ function App() {
  
   return (
     <>
-      <input onChange={(e) => handleChange(e)} type="text" />
-      <Callback handleGetName={handleGetName}></Callback>
+      <Slider></Slider>
     </>
   )
 }
