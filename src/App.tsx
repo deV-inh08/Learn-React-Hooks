@@ -1,10 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import './App.css'
 // import LayoutEffect from './components/LayoutEffect'
 // import Reducer from './components/Reducer'
 // import ReactMemo from './components/ReactMemo';
-import Memo from './components/Memo'
-
+import Callback from './components/Callback'
 
 
 function App() {
@@ -18,18 +17,31 @@ function App() {
   //   }
   // }, [])
 
-  const user = {
-    name: 'Vinh'
-  }
+  // const user = {
+  //   name: 'Vinh'
+  // }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value)
   };
 
+  // useCallback(Fn)
+
+  // const handleGetName = useCallback(() => {
+  //   console.log('Vinh')
+  // }, [])
+
+  // useMemo(c() => return { ...value })
+  const handleGetName = useMemo(() => {
+    return () => {
+      console.log('Vinh')
+    }
+  }, [])
+ 
   return (
     <>
-      <Memo user={user}></Memo>
       <input onChange={(e) => handleChange(e)} type="text" />
+      <Callback handleGetName={handleGetName}></Callback>
     </>
   )
 }

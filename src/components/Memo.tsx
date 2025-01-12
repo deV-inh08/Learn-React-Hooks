@@ -13,4 +13,9 @@ const Memo = ({ user }: Props) => {
   )
 }
 
+// React memo: có 2 tường hợp dùng React Memo để check kiểu dữ liệu tham chiếu
+
+// + Dùng function 'Equal'. Tham số thứ 2 của React.memo
+// + Dùng useMemo() return kiểu dữ liệu tham chiếu đó
+
 export default React.memo(Memo)
