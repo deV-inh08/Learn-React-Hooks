@@ -2,9 +2,10 @@ import { useState, useCallback, useMemo } from 'react'
 // import LayoutEffect from './components/LayoutEffect'
 // import Reducer from './components/Reducer'
 // import ReactMemo from './components/ReactMemo';
-import Callback from './components/Callback'
-import Watch from './components/Watch'
-import Slider from './components/Slider'
+// import Callback from './components/Callback'
+// import Watch from './components/Watch'
+// import Slider from './components/Slider'
+import AutoInput from './components/ImperativeHandle'
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
  
   return (
     <>
-      <Slider></Slider>
+      <AutoInput></AutoInput>
     </>
   )
 }
